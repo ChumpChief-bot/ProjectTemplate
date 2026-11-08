@@ -5,6 +5,21 @@ module.exports = async ({github, context, core, exec}, dryRun) => {
     const baseBranchName = context.ref.replace("refs/heads/", "");
     const bumpBranchName = `bump/${ baseBranchName }${ dryRun ? "-DO_NOT_MERGE" : "" }`;
 
+    // Fail early, before creating the bump branch, if there is nothing to release.
+    // (changesets v3: `changeset version` exits 1 when no changesets are pending, but
+    // exit 1 is also used for all other failures, so check for changeset files up front
+    // instead of trying to interpret the exit code.)
+    const { stdout: changesetFiles } = await exec.getCommandOutput("git", ["ls-files", "--", ".changeset/"]);
+    // (Exclude README.md: `changeset init` in a derived repo tracks
+    // .changeset/README.md, which is not a changeset.)
+    const hasChangesets = changesetFiles.split("\n").some((line) => {
+        const name = line.trim();
+        return name.endsWith(".md") && !name.endsWith("README.md");
+    });
+    if (!hasChangesets) {
+        throw new Error(`No unreleased changesets on ${ baseBranchName }; nothing to release. Add changesets and re-run this workflow.`);
+    }
+
     // Check if the bump branch already exists
     const branchExists = (await exec.exec("git show-ref",  ["--quiet", `refs/heads/${ bumpBranchName }`], { ignoreReturnCode: true })) === 0;
     // TODO: Maybe don't permit proceeding if the branch exists?  Definitely not in dry-run mode.
@@ -20,7 +35,8 @@ module.exports = async ({github, context, core, exec}, dryRun) => {
     }
 
     console.log("Bumping the version...");
-    // TODO: Some reasonable behavior if there are no new changesets, exit safely and quietly?
+    // Note: the no-changesets case is handled by the pre-check above; any failure here
+    // is a real error and should fail the job (changesets v3 exits 1 in both cases).
     await exec.exec("pnpm changeset version");
 
     // Commmit changes

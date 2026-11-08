@@ -6,7 +6,13 @@ export const reactConfigs = [
     {
         settings: {
             react: {
-                version: "detect",
+                // Explicit version instead of "detect": the plugin's detect path calls
+                // context.getFilename(), which ESLint 10 removed (deprecated in 9,
+                // replaced by the context.filename property), so rule loading crashes
+                // with "contextOrFilename.getFilename is not a function" (upstream:
+                // jsx-eslint/eslint-plugin-react#3970). Bump this in lockstep with the
+                // react major version.
+                version: "19.x",
             },
         },
     },

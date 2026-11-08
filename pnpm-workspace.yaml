@@ -3,5 +3,7 @@ packages:
   - packages/**/*
   - examples
 
-onlyBuiltDependencies:
-  - nx
+allowBuilds:
+  '@parcel/watcher': true
+  nx: true
+  unrs-resolver: true

@@ -19,12 +19,12 @@
         "@chumpchief/package1": "workspace:*"
     },
     "devDependencies": {
-        "@jest/globals": "^30.0.4",
-        "eslint": "^9.31.0",
+        "@jest/globals": "^30.5.2",
+        "eslint": "^10.14.0",
         "eslint-config-shared": "workspace:*",
-        "jest": "^30.0.4",
+        "jest": "^30.5.2",
         "tsconfig-shared": "workspace:*",
-        "typescript": "^5.8.3"
+        "typescript": "^6.0.3"
     },
     "repository": {
         "type": "git",
