@@ -95,7 +95,7 @@ export const tseslintConfigs = [
             // "@typescript-eslint/no-redeclare": "error",
             // "@typescript-eslint/no-redundant-type-constituents": "error", // Enabled in recommended
             // "@typescript-eslint/no-require-imports": "error", // Enabled in recommended
-            // "@typescript-eslint/no-restricted-imports": "error",
+            // "@typescript-eslint/no-restricted-imports": "error", // Deprecated, use base "no-restricted-imports"
             // "@typescript-eslint/no-restricted-types": "error",
             // "@typescript-eslint/no-shadow": "error",
             // "@typescript-eslint/no-this-alias": "error", // Enabled in recommended
