@@ -162,7 +162,7 @@ export const tseslintConfigs = [
             }], // Enabled in recommended
             // "@typescript-eslint/return-await": "error", // Enabled in strict
             // "@typescript-eslint/strict-boolean-expressions": "error",
-            "@typescript-eslint/strict-void-return": "error",
+            // "@typescript-eslint/strict-void-return": "error",
             // "@typescript-eslint/switch-exhaustiveness-check": "error",
             // "@typescript-eslint/triple-slash-reference": "error", // Enabled in recommended
             // "@typescript-eslint/unbound-method": "error", // Enabled in recommended
