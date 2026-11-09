@@ -121,6 +121,7 @@ export const tseslintConfigs = [
             // "@typescript-eslint/no-unsafe-type-assertion": "error",
             // "@typescript-eslint/no-unsafe-unary-minus": "error", // Enabled in recommended
             // "@typescript-eslint/no-unused-expressions": "error", // Enabled in recommended
+            // "@typescript-eslint/no-unused-private-class-members": "error",
             // "@typescript-eslint/no-unused-vars": "error", // Enabled in recommended
             // "@typescript-eslint/no-use-before-define": "error",
             // "@typescript-eslint/no-useless-constructor": "error", // Enabled in strict
