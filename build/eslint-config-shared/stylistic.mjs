@@ -19,6 +19,7 @@ export const stylisticConfigs = [
             // "@stylistic/dot-location": "error", // Enabled in recommended
             // "@stylistic/eol-last": "error", // Enabled in recommended
             // "@stylistic/exp-jsx-props-style": "error",
+            // "@stylistic/exp-list-style": "error",
             "@stylistic/function-call-argument-newline": ["error", "consistent"],
             "@stylistic/function-call-spacing": "error",
             "@stylistic/function-paren-newline": ["error", "multiline-arguments"],
