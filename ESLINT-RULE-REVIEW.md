@@ -102,8 +102,9 @@ Not enabled anywhere in this repo. For each: adopt now / defer / reject.
 - [x] `perfectionist/sort-constructor-parameters` — Enforce sorted constructor parameters.
   - **Recommended:** Decline. Same rationale as `sort-arrays`.
   - **Decision:** Reject — user confirmed; recorded as a commented line in `perfectionist.mjs`.
-- [ ] `@stylistic/exp-jsx-props-style` *(experimental)* — Enforce consistent line break styles for JSX props
+- [x] `@stylistic/exp-jsx-props-style` *(experimental)* — Enforce consistent line break styles for JSX props
   - **Recommended:** Defer. Experimental (`exp-` prefix, may be renamed or removed); don't pin experimental rules in a shared config. Revisit once stable.
+  - **Decision:** Defer — user confirmed; recorded as a commented line in `stylistic.mjs`; revisit when `@stylistic` promotes it to stable.
 - [ ] `@stylistic/exp-list-style` *(experimental)* — Enforce consistent spacing and line break styles inside brackets.
   - **Recommended:** Defer. Same as above.
 
