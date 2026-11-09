@@ -70,8 +70,9 @@ The `stylisticTypeChecked` preset is unchanged.
 
 None of these three are enabled in this repo, so no migration is needed. Review = confirm.
 
-- [ ] `@typescript-eslint/no-loop-func` — deprecated in favor of the base ESLint rule `no-loop-func`
+- [x] `@typescript-eslint/no-loop-func` — deprecated in favor of the base ESLint rule `no-loop-func`
   - **Recommended:** No action. Already off (commented in `tseslint.mjs`); optionally append a deprecation note to that comment line.
+  - **Decision:** Confirmed no impact — rule already off; deprecation note added to the decision log.
 - [ ] `@typescript-eslint/no-restricted-imports` — deprecated in favor of the base ESLint rule `no-restricted-imports`
   - **Recommended:** No action. Already off (commented in `tseslint.mjs`); optionally append a deprecation note.
 - [ ] `@stylistic/jsx-props-no-multi-spaces` — deprecated in favor of `@stylistic/no-multi-spaces`
