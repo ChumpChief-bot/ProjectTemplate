@@ -7,6 +7,7 @@ export const perfectionistConfigs = [
             // "perfectionist/sort-array-includes": "error",
             // "perfectionist/sort-arrays": "error",
             "perfectionist/sort-classes": "off",
+            // "perfectionist/sort-constructor-parameters": "error",
             // "perfectionist/sort-decorators": "error",
             // "perfectionist/sort-enums": "error",
             // "perfectionist/sort-export-attributes": "error", // Enabled in recommended-natural
