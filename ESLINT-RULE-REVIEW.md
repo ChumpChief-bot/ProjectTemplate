@@ -46,8 +46,9 @@ upstream. CI passed with zero violations. For each: keep as-is / tune options / 
 - [x] `no-unsafe-enum-assignment` (`error`) — Disallow assigning non-enum values to enum typed locations. *New rule.*
   - **Recommended:** Accept. Catches a genuine footgun (non-enum value in an enum-typed location); CI passed clean.
   - **Decision:** Accept — kept as enabled by `strictTypeChecked`; no config change needed.
-- [ ] `no-useless-default-assignment` (`error`) — Disallow default values that will never be used. *New rule.*
+- [x] `no-useless-default-assignment` (`error`) — Disallow default values that will never be used. *New rule.*
   - **Recommended:** Accept. Dead-code check; CI passed clean.
+  - **Decision:** Accept — kept as enabled by `strictTypeChecked`; no config change needed.
 - [ ] `no-unnecessary-type-conversion` (`error`) — Disallow conversion idioms when they do not change the type or value of the expression. *Pre-existing rule, promoted into the preset in this range.*
   - **Recommended:** Accept. Flags redundant `String(x)`/`Number(x)`/`Boolean(x)`-style noise; CI passed clean.
 
