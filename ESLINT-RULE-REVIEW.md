@@ -76,8 +76,9 @@ None of these three are enabled in this repo, so no migration is needed. Review 
 - [x] `@typescript-eslint/no-restricted-imports` — deprecated in favor of the base ESLint rule `no-restricted-imports`
   - **Recommended:** No action. Already off (commented in `tseslint.mjs`); optionally append a deprecation note.
   - **Decision:** Confirmed no impact — rule already off; deprecation note added to the decision log.
-- [ ] `@stylistic/jsx-props-no-multi-spaces` — deprecated in favor of `@stylistic/no-multi-spaces`
+- [x] `@stylistic/jsx-props-no-multi-spaces` — deprecated in favor of `@stylistic/no-multi-spaces`
   - **Recommended:** No action. Already off (commented in `stylistic.mjs`); optionally append a deprecation note.
+  - **Decision:** Confirmed no impact — rule already off; deprecation note added to the decision log. (Note: the replacement `@stylistic/no-multi-spaces` is itself commented out in this config.)
 
 (Pre-existing, unchanged across this upgrade: tseslint `no-empty-interface`,
 `no-loss-of-precision`, `no-type-alias`, `no-var-requires`, `prefer-ts-expect-error`,
