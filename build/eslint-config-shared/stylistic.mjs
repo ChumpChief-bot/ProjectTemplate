@@ -40,7 +40,7 @@ export const stylisticConfigs = [
             // "@stylistic/jsx-newline": "error",
             "@stylistic/jsx-one-expression-per-line": "off", // Enabled in recommended
             // "@stylistic/jsx-pascal-case": "error",
-            // "@stylistic/jsx-props-no-multi-spaces": "error",
+            // "@stylistic/jsx-props-no-multi-spaces": "error", // Deprecated, use "@stylistic/no-multi-spaces"
             // "@stylistic/jsx-quotes": "error", // Enabled in recommended
             // "@stylistic/jsx-self-closing-comp": "error",
             // "@stylistic/jsx-sort-props": "error",
