@@ -99,8 +99,9 @@ Not enabled anywhere in this repo. For each: adopt now / defer / reject.
 - [x] `perfectionist/sort-arrays` — Enforce sorted arrays.
   - **Recommended:** Decline. The config explicitly turns off 6 of 20 sort rules (`sort-classes`, `sort-objects`, `sort-object-types`, `sort-modules`, `sort-jsx-props`, `sort-intersection-types`) — the stance is "sort import/export syntax, not code structure".
   - **Decision:** Reject — user confirmed; recorded as a commented line in `perfectionist.mjs`.
-- [ ] `perfectionist/sort-constructor-parameters` — Enforce sorted constructor parameters.
+- [x] `perfectionist/sort-constructor-parameters` — Enforce sorted constructor parameters.
   - **Recommended:** Decline. Same rationale as `sort-arrays`.
+  - **Decision:** Reject — user confirmed; recorded as a commented line in `perfectionist.mjs`.
 - [ ] `@stylistic/exp-jsx-props-style` *(experimental)* — Enforce consistent line break styles for JSX props
   - **Recommended:** Defer. Experimental (`exp-` prefix, may be renamed or removed); don't pin experimental rules in a shared config. Revisit once stable.
 - [ ] `@stylistic/exp-list-style` *(experimental)* — Enforce consistent spacing and line break styles inside brackets.
