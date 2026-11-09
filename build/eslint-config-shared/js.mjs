@@ -187,6 +187,7 @@ export const jsConfigs = [
             // "prefer-rest-params": "error", // Enabled by tseslint's eslint-recommended-raw
             // "prefer-spread": "error", // Enabled by tseslint's eslint-recommended-raw
             "prefer-template": "error",
+            // "preserve-caught-error": "error", // Enabled in recommended
             "radix": ["error", "as-needed"],
             "require-atomic-updates": "error",
             // "require-await": "error", // Disabled by tseslint's recommended-type-checked
