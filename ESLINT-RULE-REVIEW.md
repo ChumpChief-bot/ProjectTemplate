@@ -40,8 +40,9 @@ upstream. CI passed with zero violations. For each: keep as-is / tune options / 
 
 ### `@typescript-eslint` (`strictTypeChecked`, 8.37.0 → 8.72.1)
 
-- [ ] `no-generated-empty-object-type` (`error`) — Disallow type operations that resolve to the "empty object" type. *New rule.*
+- [x] `no-generated-empty-object-type` (`error`) — Disallow type operations that resolve to the "empty object" type. *New rule.*
   - **Recommended:** Accept. Type-hygiene rule in the strict tier; CI passed clean.
+  - **Decision:** Accept — kept as enabled by `strictTypeChecked`; no config change needed.
 - [ ] `no-unsafe-enum-assignment` (`error`) — Disallow assigning non-enum values to enum typed locations. *New rule.*
   - **Recommended:** Accept. Catches a genuine footgun (non-enum value in an enum-typed location); CI passed clean.
 - [ ] `no-useless-default-assignment` (`error`) — Disallow default values that will never be used. *New rule.*
