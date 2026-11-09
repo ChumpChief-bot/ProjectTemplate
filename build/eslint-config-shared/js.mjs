@@ -139,7 +139,7 @@ export const jsConfigs = [
             // "no-ternary": "error",
             // "no-this-before-super": "error", // Disabled by tseslint's eslint-recommended-raw
             // "no-throw-literal": "error", // Disabled by tseslint's recommended-type-checked
-            // "no-unassigned-vars": "error",
+            // "no-unassigned-vars": "error", // Enabled in recommended
             // "no-undef": "error", // Disabled by tseslint's eslint-recommended-raw
             "no-undef-init": "error",
             // "no-undefined": "error",
