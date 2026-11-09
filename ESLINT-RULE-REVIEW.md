@@ -10,6 +10,15 @@ Companion document: `ESLINT-RULES-DELTA.md` (full catalog diff and methodology).
 Scope: **18 items** — 9 newly active rules, 3 newly deprecated rules, 6 new opt-in rules.
 No rules were removed, and no rule this repo enables was deprecated.
 
+Each item carries a `**Recommended:**` line — the assistant's starting position for the
+discussion. These are proposals, not decisions; each item is reviewed one at a time and
+the final action is recorded in the `Decision:` field.
+
+Regardless of the individual decisions, the config decision-log comments in
+`build/eslint-config-shared/` will be synced so they stay accurate: the now-preset-enabled
+rules get `// Enabled in <preset>` annotations (e.g. `no-unassigned-vars` in `js.mjs`), and
+the three deprecated rules get deprecation notes where they are already commented out.
+
 ---
 
 ## 1. Newly active in this repo (9)
@@ -20,22 +29,31 @@ upstream. CI passed with zero violations. For each: keep as-is / tune options / 
 ### eslint core (`eslint:recommended`, 9.31.0 → 10.0.1)
 
 - [ ] `preserve-caught-error` (`error`) — Disallow losing originally caught error when re-throwing custom errors. *New rule in ESLint 10; in recommended from day one.*
+  - **Recommended:** Accept. Catches a real error-handling anti-pattern (`throw new Error(err.message)` drops the original stack/cause). CI passed clean. If rejected: explicit `"off"` in `js.mjs`.
 - [ ] `no-unassigned-vars` (`error`) — Disallow `let` or `var` variables that are read but never assigned. *Pre-existing rule, newly added to recommended.*
+  - **Recommended:** Accept. Sensible superset of `no-unused-vars`; CI passed clean.
 - [ ] `no-useless-assignment` (`error`) — Disallow variable assignments when the value is not used. *Pre-existing rule, newly added to recommended.*
+  - **Recommended:** Accept. Low-noise dead-assignment check; CI passed clean.
 
 ### `@typescript-eslint` (`strictTypeChecked`, 8.37.0 → 8.72.1)
 
 - [ ] `no-generated-empty-object-type` (`error`) — Disallow type operations that resolve to the "empty object" type. *New rule.*
+  - **Recommended:** Accept. Type-hygiene rule in the strict tier; CI passed clean.
 - [ ] `no-unsafe-enum-assignment` (`error`) — Disallow assigning non-enum values to enum typed locations. *New rule.*
+  - **Recommended:** Accept. Catches a genuine footgun (non-enum value in an enum-typed location); CI passed clean.
 - [ ] `no-useless-default-assignment` (`error`) — Disallow default values that will never be used. *New rule.*
+  - **Recommended:** Accept. Dead-code check; CI passed clean.
 - [ ] `no-unnecessary-type-conversion` (`error`) — Disallow conversion idioms when they do not change the type or value of the expression. *Pre-existing rule, promoted into the preset in this range.*
+  - **Recommended:** Accept. Flags redundant `String(x)`/`Number(x)`/`Boolean(x)`-style noise; CI passed clean.
 
 The `stylisticTypeChecked` preset is unchanged.
 
 ### `eslint-plugin-perfectionist` (`recommended-natural`, 4.15.0 → 5.13.0)
 
 - [ ] `sort-export-attributes` (`error`, natural asc) — Enforce sorted export attributes. *New rule.*
+  - **Recommended:** Accept. Consistent with the config's stance of sorting import/export syntax; CI passed clean.
 - [ ] `sort-import-attributes` (`error`, natural asc) — Enforce sorted import attributes. *New rule.*
+  - **Recommended:** Accept. Same as above.
 
 ---
 
@@ -44,8 +62,11 @@ The `stylisticTypeChecked` preset is unchanged.
 None of these three are enabled in this repo, so no migration is needed. Review = confirm.
 
 - [ ] `@typescript-eslint/no-loop-func` — deprecated in favor of the base ESLint rule `no-loop-func`
+  - **Recommended:** No action. Already off (commented in `tseslint.mjs`); optionally append a deprecation note to that comment line.
 - [ ] `@typescript-eslint/no-restricted-imports` — deprecated in favor of the base ESLint rule `no-restricted-imports`
+  - **Recommended:** No action. Already off (commented in `tseslint.mjs`); optionally append a deprecation note.
 - [ ] `@stylistic/jsx-props-no-multi-spaces` — deprecated in favor of `@stylistic/no-multi-spaces`
+  - **Recommended:** No action. Already off (commented in `stylistic.mjs`); optionally append a deprecation note.
 
 (Pre-existing, unchanged across this upgrade: tseslint `no-empty-interface`,
 `no-loss-of-precision`, `no-type-alias`, `no-var-requires`, `prefer-ts-expect-error`,
@@ -58,11 +79,17 @@ None of these three are enabled in this repo, so no migration is needed. Review 
 Not enabled anywhere in this repo. For each: adopt now / defer / reject.
 
 - [ ] `@typescript-eslint/no-unused-private-class-members` — Disallow unused private class members
+  - **Recommended:** Adopt. The core rule (now in `eslint:recommended`) only catches ES `#private` fields; this also catches TS `private` members. Quality rule, fits the strict tier. If adopted: explicit `"error"` in `tseslint.mjs`.
 - [ ] `@typescript-eslint/strict-void-return` — Disallow passing a value-returning function in a position accepting a void function
+  - **Recommended:** Adopt. Type-safety rule that complements the strict tier (catches accidentally-discarded return values, e.g. in callbacks); low noise in practice.
 - [ ] `perfectionist/sort-arrays` — Enforce sorted arrays.
+  - **Recommended:** Decline. The config explicitly turns off 6 of 20 sort rules (`sort-classes`, `sort-objects`, `sort-object-types`, `sort-modules`, `sort-jsx-props`, `sort-intersection-types`) — the stance is "sort import/export syntax, not code structure".
 - [ ] `perfectionist/sort-constructor-parameters` — Enforce sorted constructor parameters.
+  - **Recommended:** Decline. Same rationale as `sort-arrays`.
 - [ ] `@stylistic/exp-jsx-props-style` *(experimental)* — Enforce consistent line break styles for JSX props
+  - **Recommended:** Defer. Experimental (`exp-` prefix, may be renamed or removed); don't pin experimental rules in a shared config. Revisit once stable.
 - [ ] `@stylistic/exp-list-style` *(experimental)* — Enforce consistent spacing and line break styles inside brackets.
+  - **Recommended:** Defer. Same as above.
 
 ---
 
