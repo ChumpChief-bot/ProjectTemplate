@@ -60,8 +60,9 @@ The `stylisticTypeChecked` preset is unchanged.
 - [x] `sort-export-attributes` (`error`, natural asc) — Enforce sorted export attributes. *New rule.*
   - **Recommended:** Accept. Consistent with the config's stance of sorting import/export syntax; CI passed clean.
   - **Decision:** Accept — kept as enabled by `recommended-natural`; no config change needed.
-- [ ] `sort-import-attributes` (`error`, natural asc) — Enforce sorted import attributes. *New rule.*
+- [x] `sort-import-attributes` (`error`, natural asc) — Enforce sorted import attributes. *New rule.*
   - **Recommended:** Accept. Same as above.
+  - **Decision:** Accept — kept as enabled by `recommended-natural`; no config change needed.
 
 ---
 
