@@ -113,6 +113,7 @@ export const tseslintConfigs = [
             // "@typescript-eslint/no-unsafe-assignment": "error", // Enabled in recommended
             // "@typescript-eslint/no-unsafe-call": "error", // Enabled in recommended
             // "@typescript-eslint/no-unsafe-declaration-merging": "error", // Enabled in recommended
+            // "@typescript-eslint/no-unsafe-enum-assignment": "error", // Enabled in strict
             // "@typescript-eslint/no-unsafe-enum-comparison": "error", // Enabled in recommended
             // "@typescript-eslint/no-unsafe-function-type": "error", // Enabled in recommended
             // "@typescript-eslint/no-unsafe-member-access": "error", // Enabled in recommended
