@@ -81,7 +81,7 @@ export const tseslintConfigs = [
             // "@typescript-eslint/no-inferrable-types": "error", // Enabled in stylistic
             // "@typescript-eslint/no-invalid-this": "error",
             // "@typescript-eslint/no-invalid-void-type": "error", // Enabled in strict
-            // "@typescript-eslint/no-loop-func": "error",
+            // "@typescript-eslint/no-loop-func": "error", // Deprecated, use base "no-loop-func"
             // "@typescript-eslint/no-magic-numbers": "error",
             // "@typescript-eslint/no-meaningless-void-operator": "error", // Enabled in strict
             // "@typescript-eslint/no-misused-new": "error", // Enabled in recommended
