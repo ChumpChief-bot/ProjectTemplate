@@ -28,10 +28,12 @@ upstream. CI passed with zero violations. For each: keep as-is / tune options / 
 
 ### eslint core (`eslint:recommended`, 9.31.0 → 10.0.1)
 
-- [ ] `preserve-caught-error` (`error`) — Disallow losing originally caught error when re-throwing custom errors. *New rule in ESLint 10; in recommended from day one.*
+- [x] `preserve-caught-error` (`error`) — Disallow losing originally caught error when re-throwing custom errors. *New rule in ESLint 10; in recommended from day one.*
   - **Recommended:** Accept. Catches a real error-handling anti-pattern (`throw new Error(err.message)` drops the original stack/cause). CI passed clean. If rejected: explicit `"off"` in `js.mjs`.
-- [ ] `no-unassigned-vars` (`error`) — Disallow `let` or `var` variables that are read but never assigned. *Pre-existing rule, newly added to recommended.*
+  - **Decision:** Accept — kept as enabled by `eslint:recommended`; no config change needed.
+- [x] `no-unassigned-vars` (`error`) — Disallow `let` or `var` variables that are read but never assigned. *Pre-existing rule, newly added to recommended.*
   - **Recommended:** Accept. Sensible superset of `no-unused-vars`; CI passed clean.
+  - **Decision:** Accept — kept as enabled by `eslint:recommended`; no config change needed.
 - [ ] `no-useless-assignment` (`error`) — Disallow variable assignments when the value is not used. *Pre-existing rule, newly added to recommended.*
   - **Recommended:** Accept. Low-noise dead-assignment check; CI passed clean.
 
