@@ -107,7 +107,7 @@ export const tseslintConfigs = [
             // "@typescript-eslint/no-unnecessary-type-arguments": "error", // Enabled in strict
             // "@typescript-eslint/no-unnecessary-type-assertion": "error", // Enabled in recommended
             // "@typescript-eslint/no-unnecessary-type-constraint": "error", // Enabled in recommended
-            // "@typescript-eslint/no-unnecessary-type-conversion": "error",
+            // "@typescript-eslint/no-unnecessary-type-conversion": "error", // Enabled in strict
             // "@typescript-eslint/no-unnecessary-type-parameters": "error", // Enabled in strict
             // "@typescript-eslint/no-unsafe-argument": "error", // Enabled in recommended
             // "@typescript-eslint/no-unsafe-assignment": "error", // Enabled in recommended
