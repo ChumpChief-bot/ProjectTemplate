@@ -5,6 +5,7 @@ export const perfectionistConfigs = [
     {
         rules: {
             // "perfectionist/sort-array-includes": "error",
+            // "perfectionist/sort-arrays": "error",
             "perfectionist/sort-classes": "off",
             // "perfectionist/sort-decorators": "error",
             // "perfectionist/sort-enums": "error",
