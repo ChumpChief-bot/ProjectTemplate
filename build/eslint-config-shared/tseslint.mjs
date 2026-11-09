@@ -75,6 +75,7 @@ export const tseslintConfigs = [
             // "@typescript-eslint/no-extraneous-class": "error", // Enabled in strict
             // "@typescript-eslint/no-floating-promises": "error", // Enabled in recommended
             // "@typescript-eslint/no-for-in-array": "error", // Enabled in recommended
+            // "@typescript-eslint/no-generated-empty-object-type": "error", // Enabled in strict
             // "@typescript-eslint/no-implied-eval": "error", // Enabled in recommended
             // "@typescript-eslint/no-import-type-side-effects": "error",
             // "@typescript-eslint/no-inferrable-types": "error", // Enabled in stylistic
