@@ -34,8 +34,9 @@ upstream. CI passed with zero violations. For each: keep as-is / tune options / 
 - [x] `no-unassigned-vars` (`error`) — Disallow `let` or `var` variables that are read but never assigned. *Pre-existing rule, newly added to recommended.*
   - **Recommended:** Accept. Sensible superset of `no-unused-vars`; CI passed clean.
   - **Decision:** Accept — kept as enabled by `eslint:recommended`; no config change needed.
-- [ ] `no-useless-assignment` (`error`) — Disallow variable assignments when the value is not used. *Pre-existing rule, newly added to recommended.*
+- [x] `no-useless-assignment` (`error`) — Disallow variable assignments when the value is not used. *Pre-existing rule, newly added to recommended.*
   - **Recommended:** Accept. Low-noise dead-assignment check; CI passed clean.
+  - **Decision:** Accept — kept as enabled by `eslint:recommended`; no config change needed.
 
 ### `@typescript-eslint` (`strictTypeChecked`, 8.37.0 → 8.72.1)
 
