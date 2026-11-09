@@ -95,9 +95,10 @@ Not enabled anywhere in this repo. For each: adopt now / defer / reject.
   - **Decision:** Adopt — added as an explicit `"error"` entry in `tseslint.mjs`; lint passes with zero violations.
 - [ ] `@typescript-eslint/strict-void-return` — Disallow passing a value-returning function in a position accepting a void function
   - **Recommended:** Adopt. Type-safety rule that complements the strict tier (catches accidentally-discarded return values, e.g. in callbacks); low noise in practice.
-  - **Decision:** Adopt — added as an explicit `"error"` entry in `tseslint.mjs`; lint passes with zero violations.
-- [ ] `perfectionist/sort-arrays` — Enforce sorted arrays.
+  - **Decision:** Reject — user declined; kept off (commented line) in `tseslint.mjs`.
+- [x] `perfectionist/sort-arrays` — Enforce sorted arrays.
   - **Recommended:** Decline. The config explicitly turns off 6 of 20 sort rules (`sort-classes`, `sort-objects`, `sort-object-types`, `sort-modules`, `sort-jsx-props`, `sort-intersection-types`) — the stance is "sort import/export syntax, not code structure".
+  - **Decision:** Reject — user confirmed; recorded as a commented line in `perfectionist.mjs`.
 - [ ] `perfectionist/sort-constructor-parameters` — Enforce sorted constructor parameters.
   - **Recommended:** Decline. Same rationale as `sort-arrays`.
 - [ ] `@stylistic/exp-jsx-props-style` *(experimental)* — Enforce consistent line break styles for JSX props
