@@ -90,10 +90,10 @@ None of these three are enabled in this repo, so no migration is needed. Review 
 
 Not enabled anywhere in this repo. For each: adopt now / defer / reject.
 
-- [ ] `@typescript-eslint/no-unused-private-class-members` — Disallow unused private class members
+- [x] `@typescript-eslint/no-unused-private-class-members` — Disallow unused private class members
   - **Recommended:** Adopt. The core rule (now in `eslint:recommended`) only catches ES `#private` fields; this also catches TS `private` members. Quality rule, fits the strict tier. If adopted: explicit `"error"` in `tseslint.mjs`.
   - **Decision:** Adopt — added as an explicit `"error"` entry in `tseslint.mjs`; lint passes with zero violations.
-- [ ] `@typescript-eslint/strict-void-return` — Disallow passing a value-returning function in a position accepting a void function
+- [x] `@typescript-eslint/strict-void-return` — Disallow passing a value-returning function in a position accepting a void function
   - **Recommended:** Adopt. Type-safety rule that complements the strict tier (catches accidentally-discarded return values, e.g. in callbacks); low noise in practice.
   - **Decision:** Reject — user declined; kept off (commented line) in `tseslint.mjs`.
 - [x] `perfectionist/sort-arrays` — Enforce sorted arrays.
@@ -121,4 +121,4 @@ Not enabled anywhere in this repo. For each: adopt now / defer / reject.
 
 ---
 
-- [ ] **Review complete** — all items above resolved
+- [x] **Review complete** — all 18 items resolved (2026-11-10)
