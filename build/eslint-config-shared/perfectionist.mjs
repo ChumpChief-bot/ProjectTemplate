@@ -11,6 +11,7 @@ export const perfectionistConfigs = [
             // "perfectionist/sort-export-attributes": "error", // Enabled in recommended-natural
             // "perfectionist/sort-exports": "error",
             // "perfectionist/sort-heritage-clauses": "error",
+            // "perfectionist/sort-import-attributes": "error", // Enabled in recommended-natural
             // "perfectionist/sort-imports": "error",
             // "perfectionist/sort-interfaces": "error",
             "perfectionist/sort-intersection-types": "off",
