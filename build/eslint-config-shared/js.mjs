@@ -157,7 +157,7 @@ export const jsConfigs = [
             // "no-unused-private-class-members": "error", // Enabled in recommended
             // "no-unused-vars": "error", // Disabled by tseslint's recommended-type-checked
             // "no-use-before-define": "error",
-            // "no-useless-assignment": "error",
+            // "no-useless-assignment": "error", // Enabled in recommended
             // "no-useless-backreference": "error", // Enabled in recommended
             "no-useless-call": "error",
             // "no-useless-catch": "error", // Enabled in recommended
