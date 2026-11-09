@@ -124,6 +124,7 @@ export const tseslintConfigs = [
             // "@typescript-eslint/no-unused-vars": "error", // Enabled in recommended
             // "@typescript-eslint/no-use-before-define": "error",
             // "@typescript-eslint/no-useless-constructor": "error", // Enabled in strict
+            // "@typescript-eslint/no-useless-default-assignment": "error", // Enabled in strict
             // "@typescript-eslint/no-useless-empty-export": "error",
             // "@typescript-eslint/no-wrapper-object-types": "error", // Enabled in recommended
             // "@typescript-eslint/non-nullable-type-assertion-style": "error", // Enabled in stylistic
